@@ -9,6 +9,16 @@ const Products = () => {
     axios('https://fakestoreapi.com/products').then((res) => setData(res.data));
   }, [])
 
+  const totalItems = async() =>{ 
+     console.log(data.length); // total de productos
+}
+totalItems()
+  const promedio = async() =>{
+    const sum = data.reduce((accumulator, item) => accumulator + item.price, 0);
+    const average = sum / data.length;
+    console.log('Promedio:', average);
+  }
+  promedio()
 
   return data.map((product) => {
     return (
@@ -19,7 +29,9 @@ const Products = () => {
         <button>Comprar</button>
       </div>
     );
-  })
+  }
+  
+  )
 }
 
 export default Products
