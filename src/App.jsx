@@ -1,5 +1,3 @@
-import Home from './components/home/Home'
-import Navbar from "./components/navbar/Navbar";
 import Dashboard from "./components/dashboard/Dashboard";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -9,10 +7,8 @@ function App() {
 
     return (
       <BrowserRouter>
-      <Navbar />
         <Routes>
-          <Route path="/" element={<Home API={API}/>}/>
-          <Route path="/dashboard" element={<Dashboard API ={API}/>}/>
+          <Route path="/" element={<Dashboard API ={API}/>}/>
           </Routes>
       </BrowserRouter>
     )

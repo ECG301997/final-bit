@@ -1,17 +1,18 @@
 import TotalProducts from "./TotalProducts";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import AveragePriceProducts from "./AveragePriceProducts";
 import TotalOrders from "./TotalOrders";
 import MostSelled from "./MostSelled";
+import axios from "axios";
 
 
 const Dashboard = (props) => {
     const [dataProducts, setDataProducts] = useState([]);
     const [dataCart,setDataCart] = useState([]);
+    const data = props;
 
-    const conectAPI = (endpoint,setData) =>{
-        axios(`${props.API}/${endpoint}`)
+    async function conectAPI(endpoint,setData){
+        await axios(`${data.API}/${endpoint}`)
         .then((res) => setData(res.data))
         .catch((err)=> console.error(err))
     }

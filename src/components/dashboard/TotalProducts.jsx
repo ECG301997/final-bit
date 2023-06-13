@@ -1,7 +1,8 @@
 
 const TotalProducts = (props) => {
-
-  const TotalProductos = props.dataProducts.length;
+  
+  const data = props;
+  const TotalProductos = data.dataProducts.length;
   
 
   return (

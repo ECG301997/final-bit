@@ -1,9 +1,9 @@
 
 
 const AveragePriceProducts = (props) => {
-    const data = props.dataProducts;
-
-    const sum = data.reduce((accumulator, item) => accumulator + item.price, 0);
+    const data = props;
+  
+    const sum = data.dataProducts.reduce((accumulator, item) => accumulator + item.price, 0);
     const average = Math.round((sum / data.length)*100)/100;
 
   

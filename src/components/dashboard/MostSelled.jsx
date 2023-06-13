@@ -1,12 +1,12 @@
 
 const MostSelled = (props) => {
 
-    const data = props.dataCart;
-
+    const data = props;
+    const dataCart = data.dataCart
 
     const productMap = new Map();
 
-    data.forEach(entry => {
+    dataCart.forEach(entry => {
         entry.products.forEach(product => {
             const productId = product.productId;
             const quantity = product.quantity;
@@ -22,9 +22,11 @@ const MostSelled = (props) => {
     // Ordenar el mapeo de mayor a menor según las cantidades
     const sortedMap = new Map([...productMap.entries()].sort((a, b) => b[1] - a[1]));
 
-    sortedMap.forEach((quantity, productId) => {
-        console.log(productId +  quantity);
-    });
+    
+    // imprimir la cantidad y el id
+    // sortedMap.forEach((quantity, productId) => {
+    //     console.log(productId +  quantity);
+    // });
 
 
     return (

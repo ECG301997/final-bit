@@ -1,6 +1,7 @@
 
 const TotalOrders = (props) => {
-    const total = props.dataCart.length;
+    const data = props;
+    const total = data.dataCart.length;
   return (
     <div>
       <h1>Total Ordenes : {total}</h1>
