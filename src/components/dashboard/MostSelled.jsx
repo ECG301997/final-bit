@@ -21,6 +21,7 @@ const MostSelled = (props) => {
 
     // Ordenar el mapeo de mayor a menor según las cantidades
     const sortedMap = new Map([...productMap.entries()].sort((a, b) => b[1] - a[1]));
+    console.log(sortedMap);
 
     
     // imprimir la cantidad y el id

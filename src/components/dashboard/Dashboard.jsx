@@ -4,6 +4,7 @@ import AveragePriceProducts from "./AveragePriceProducts";
 import TotalOrders from "./TotalOrders";
 import MostSelled from "./MostSelled";
 import axios from "axios";
+import TotalIncome from "./TotalIncome";
 
 
 const Dashboard = (props) => {
@@ -24,13 +25,13 @@ const Dashboard = (props) => {
     conectAPI('carts',setDataCart)
   }, [])
 
-
   return (
     <div>
       <TotalProducts dataProducts={dataProducts}/>
       <AveragePriceProducts dataProducts={dataProducts}/>
       <TotalOrders dataCart={dataCart}/>
       <MostSelled dataCart={dataCart}/>
+      <TotalIncome data={data} />
     </div>
   )
 }
