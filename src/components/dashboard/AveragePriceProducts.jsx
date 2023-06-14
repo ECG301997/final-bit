@@ -9,7 +9,7 @@ const AveragePriceProducts = (props) => {
   
 
   return (
-    <div>
+    <div className='averagePrice'>
       <h1>PROMEDIO:{average} </h1>
     </div>
   )

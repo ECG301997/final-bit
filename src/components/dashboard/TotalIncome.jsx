@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './Dashboard.css'
 
 const Totalincome = (props) => {
     const [totalIngresos, setTotalIngresos] = useState(0);
@@ -41,7 +42,7 @@ const Totalincome = (props) => {
     }, []);
 
     return (
-        <div>
+        <div className='totalIncome'>
             Total de ingresos: {totalIngresos}
         </div>);
 };

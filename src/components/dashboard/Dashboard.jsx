@@ -26,12 +26,22 @@ const Dashboard = (props) => {
   }, [])
 
   return (
-    <div>
-      <TotalProducts dataProducts={dataProducts}/>
-      <AveragePriceProducts dataProducts={dataProducts}/>
-      <TotalOrders dataCart={dataCart}/>
-      <MostSelled dataCart={dataCart}/>
-      <TotalIncome data={data} />
+    <div className="dashboard">
+      <div className="item">
+        <TotalIncome data={data} />
+      </div>
+      <div className="item">
+        <TotalProducts dataProducts={dataProducts} />
+      </div>
+      <div className="item">
+        <AveragePriceProducts dataProducts={dataProducts} />
+      </div>
+      <div className="item">
+        <TotalOrders dataCart={dataCart} />
+      </div>
+      <div className="item-sell">
+        <MostSelled dataCart={dataCart} />
+      </div>
     </div>
   )
 }
