@@ -1,26 +1,33 @@
 import { 
   Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
+  ArcElement,
   Tooltip,
-  Legend,
-  Filler
+  Legend
+  // CategoryScale,
+  // LinearScale,
+  // PointElement,
+  // LineElement,
+  // Title,
+  // Tooltip,
+  // Legend,
+  // Filler
 } from 'chart.js'
 
-import {Line} from 'react-chartjs-2'
+import {Doughnut} from 'react-chartjs-2'
+// import {Line} from 'react-chartjs-2'
 
 ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
+  ArcElement,
   Tooltip,
-  Legend,
-  Filler
+  Legend
+  // CategoryScale,
+  // LinearScale,
+  // PointElement,
+  // LineElement,
+  // Title,
+  // Tooltip,
+  // Legend,
+  // Filler
 )
 
 const MostSelled = (props) => {
@@ -57,6 +64,7 @@ const MostSelled = (props) => {
 
     const options = {
       responsive: true,
+      color: "white"
     }
 
      // Crear el objeto de datos del gráfico
@@ -94,8 +102,8 @@ const MostSelled = (props) => {
 
     return (
     <div>
-    <h2>PRODUCTOS MAS VENDIDOS</h2>
-    <Line data={chartData} options={options}/>
+    <p className='text'>PRODUCTOS MAS VENDIDOS</p>
+    <Doughnut data={chartData} options={options} />
   </div>
     )
 }
